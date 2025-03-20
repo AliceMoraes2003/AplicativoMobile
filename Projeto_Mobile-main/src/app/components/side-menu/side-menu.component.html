@@ -1,0 +1,32 @@
+<ion-menu side="start" menuId="sideMenu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title> <b>Menu</b> </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/produto" routerLinkActive="active" detail>
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        Início
+      </ion-item>
+
+      <ion-item routerLink="/favoritos" routerLinkActive="active" detail>
+        <ion-icon slot="start" name="heart-outline"></ion-icon>
+        Favoritos
+      </ion-item>
+
+      <ion-item routerLink="/sobre" routerLinkActive="active" detail>
+        <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+        Sobre Nós
+      </ion-item>
+
+      <ion-item routerLink="/meu-carrinho" routerLinkActive="active" detail>
+        <ion-icon slot="start" name="cart-outline"></ion-icon>
+        Carrinho
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>

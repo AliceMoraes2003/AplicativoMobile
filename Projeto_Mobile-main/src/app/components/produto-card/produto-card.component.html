@@ -1,0 +1,46 @@
+<ion-card class="produto-card">
+  
+  <div class="fav-icon">
+    <ion-icon
+      [name]="isFavorito ? 'heart' : 'heart-outline'"
+      (click)="toggleFavorito()"
+      class="favoritar-icon"
+      [style.color]="isFavorito ? 'red' : 'black'"
+    >
+    </ion-icon>
+  </div>
+
+  <div class="container-img">
+    <ion-img [src]="produto.image" alt="{{ produto.title }}"></ion-img>
+  </div>
+  <ion-card-header>
+    <ion-card-title>{{ produto.title }}</ion-card-title>
+    <ion-card-subtitle>{{ produto.price | currency : 'BRL' }}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p *ngIf="mostrarDescricao; else descricaoCurta">
+      {{ produto.description }}
+    </p>
+    <ng-template #descricaoCurta>
+      {{ produto.description | slice : 0 : 50 }}...
+    </ng-template>
+
+    <div class="botoes">
+      <!-- Botão Ver Mais -->
+      <ion-button fill="clear" (click)="toggleDescricao()">
+        {{ mostrarDescricao ? "Ver Menos" : "Ver Mais" }}
+      </ion-button>
+
+      <!-- Botão Adicionar ao Carrinho -->
+      <ion-button
+        fill="solid"
+        [appHighlightButton]="isNoCarrinho(produto)"
+        [disabled]="isNoCarrinho(produto)"
+        (click)="adicionarAoCarrinho(produto)"
+      >
+        {{ isNoCarrinho(produto) ? "Adicionado" : "Adicionar ao Carrinho" }}
+      </ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>

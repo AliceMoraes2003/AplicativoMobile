@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [appLoading]="isLoading">
+  <ion-toolbar class="filter-container">
+    <ion-item lines="nones">
+      <ion-label>Filtrar por categoria:</ion-label>
+      <ion-select
+        [(ngModel)]="selectedCategory"
+        placeholder="Selecione uma categoria"
+      >
+        <ion-select-option
+          *ngFor="let categoria of categorias"
+          [value]="categoria"
+        >
+          {{ categoryNames[categoria] || categoria }}
+        </ion-select-option>
+      </ion-select>
+      <ion-button
+        class="custom-button"
+        *ngIf="selectedCategory"
+        (click)="limparFiltro()"
+      >
+        Limpar
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+
+  <div *ngIf="!isLoading">
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col
+          size="12"
+          size-md="6"
+          size-lg="4"
+          *ngFor="let produto of produtos | filter: selectedCategory"
+        >
+          <app-produto-card
+            [produto]="produto"
+            [isFavorito]="isFavorito(produto)"
+            (favoritoChange)="atualizarFavoritos(produto, $event)"
+          >
+          </app-produto-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

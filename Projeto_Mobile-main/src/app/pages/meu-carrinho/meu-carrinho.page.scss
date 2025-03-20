@@ -1,0 +1,18 @@
+ion-footer {
+  ion-toolbar {
+    ion-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+}
+
+ion-toolbar {
+  --background: #4a7c74;
+  --color: white;
+}
+
+.empty {
+  display: flex;
+  text-align: center;
+}

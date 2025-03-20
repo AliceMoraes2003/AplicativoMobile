@@ -1,0 +1,30 @@
+.sobre-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.descricao {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+ion-card {
+  margin: 15px 0;
+}
+
+.call-to-action {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+ion-button {
+  margin-top: 15px;
+  --background: #4a7c74;
+  --background-activated: #3d695f;
+  --color: white;
+}
+
+ion-toolbar {
+  --background: #4a7c74; /* Cor da barra superior */
+  --color: white;
+}

@@ -1,0 +1,22 @@
+ion-button {
+  --background: #4a7c74;
+  --bacground-activated: #3d695f;
+  color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+ion-toolbar {
+  --background: #4a7c74;
+  --color: white;
+}
+
+ion-item {
+  --color: #4a7c74;
+  --color-activated: #3d695f;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+}

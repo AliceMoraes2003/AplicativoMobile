@@ -1,0 +1,14 @@
+:host {
+    --background: #fff;
+  }
+  
+  ion-item {
+    --background: transparent;
+    color: #4a7c74;
+    font-weight: bold;
+  }
+  
+  ion-item.activated {
+    --background: #f0f0f0;
+  }
+  

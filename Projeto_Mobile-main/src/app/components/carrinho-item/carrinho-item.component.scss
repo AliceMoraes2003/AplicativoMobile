@@ -1,0 +1,42 @@
+.carrinho-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+  
+    .item-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .item-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  
+    .item-info {
+      flex: 1;
+  
+      h2 {
+        font-size: 1rem;
+        margin: 0;
+      }
+  
+      p {
+        margin: 0;
+        color: #888;
+      }
+    }
+  
+    ion-button {
+      --color: white;
+      --background: #e74c3c;
+      --background-activated: #c0392b;
+      font-size: 0.8rem;
+    }
+  }
+  

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Meu Carrinho</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="carrinho.length > 0; else vazio">
+    <!-- Listagem de itens do carrinho -->
+    <app-carrinho-item
+      *ngFor="let produto of carrinho"
+      [produto]="produto"
+      (remover)="removerProduto(produto)"
+    ></app-carrinho-item>
+  </ion-list>
+
+  <ng-template #vazio>
+    <div class="empty">
+      <ion-text color="medium">
+        <h2>Nenhum produto adicionado ao carrinho.</h2>
+      </ion-text>
+    </div>
+  </ng-template>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Total: {{ total | currency }}</ion-title>
+  </ion-toolbar>
+</ion-footer>

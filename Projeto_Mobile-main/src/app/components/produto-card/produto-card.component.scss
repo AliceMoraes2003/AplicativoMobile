@@ -1,0 +1,79 @@
+.produto-card {
+  width: 300px;
+  min-height: 550px;
+  margin: 10px auto;
+  position: relative;
+  border: solid rgba(174, 174, 174, 0.736);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-img {
+    margin-top: 5px;
+
+    ion-img {
+      padding: auto;
+      width: 210px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  ion-card-header {
+    text-align: left;
+  }
+
+  ion-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    .botoes {
+      margin-top: 15px;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+
+      ion-button {
+        width: 240px;
+        --background: #4a7c74;
+        --background-activated: #3d695f;
+        --color: white;
+      }
+    }
+  }
+
+  .fav-icon {
+    width: 100%;
+    justify-content: right;
+    margin: none;
+
+    .favoritar-icon {
+      margin-right: 12px;
+      margin-top: 10px;
+
+      font-size: 30px;
+      cursor: pointer;
+      background: white;
+      border-radius: 50%;
+      padding: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+

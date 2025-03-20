@@ -1,0 +1,21 @@
+<ion-card class="carrinho-item">
+  <div class="item-container">
+    <!-- Imagem do produto -->
+    <ion-img [src]="produto.image" class="item-img"></ion-img>
+
+    <!-- Informações do produto -->
+    <div class="item-info">
+      <h2>{{ produto.title | slice: 0:25 }}...</h2>
+      <p>{{ produto.price | currency : 'BRL' }}</p>
+    </div>
+
+    <!-- Botão de remover -->
+    <ion-button
+      fill="clear"
+      color="danger"
+      (click)="removerDoCarrinho()"
+    >
+      Remover
+    </ion-button>
+  </div>
+</ion-card>
